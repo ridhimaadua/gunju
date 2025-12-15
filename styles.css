@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  background: #fff6f8;
+  font-family: Arial, sans-serif;
+}
+
+.canvas {
+  width: 390px;
+  height: 820px;
+  margin: auto;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Lyrics */
+.lyrics {
+  padding: 15px;
+  font-size: 12px;
+  color: #777;
+  opacity: 0.6;
+}
+
+/* Music Card */
+.music-card {
+  position: absolute;
+  top: 110px;
+  right: 15px;
+  background: #ffd6e8;
+  width: 90px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.song {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.artist {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Polaroids */
+.polaroids {
+  position: absolute;
+  top: 230px;
+  left: 20px;
+}
+
+.polaroids img {
+  width: 120px;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Big photo */
+.big-photo {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
+.big-photo img {
+  width: 180px;
+  border-radius: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Stickers */
+.sticker {
+  position: absolute;
+}
+
+.crown {
+  top: 10px;
+  right: 120px;
+  width: 70px;
+}
+
+.bow {
+  top: 300px;
+  left: 150px;
+  width: 60px;
+}
+
+.kiss {
+  bottom: 160px;
+  left: 30px;
+  width: 80px;
+}
+/* Scroll Card */
+.scroll-card {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #ffd6e8;
+  padding: 12px 18px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  font-size: 14px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  animation: floatUp 0.8s ease;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.popup-content h3 {
+  color: #d6336c;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* ===============================
+   SCROLL CARDS (EMOTIONAL + FUNNY)
+   =============================== */
+
+.scroll-card {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #ffd6e8;
+  padding: 12px 18px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  font-size: 14px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  animation: floatUp 0.8s ease;
+}
+
+/* Funny card color */
+.funny-card {
+  background: #fff176;
+  color: #000;
+  font-weight: bold;
+  bottom: 90px;   /* emotional card se upar */
+}
+
+/* Animation */
+@keyframes floatUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   POPUP STYLES
+   =============================== */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  animation: scaleUp 0.4s ease;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-content h3 {
+  color: #d6336c;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* ===============================
+   BIG VIDEO SECTION (BOTTOM)
+   =============================== */
+
+.big-video-section {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  background: #fff6f8;
+}
+
+.big-video-section video {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
