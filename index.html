@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>It's Always You 💕</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="canvas">
+
+  <!-- Lyrics -->
+  <div class="lyrics">
+    <h4>It's You</h4>
+    <p>
+      OO MERI NADIYAAA OOO MERI BAGOOO<br>
+      sbse jada pyaar h tujhse jada to bolna nhi aataa<br>
+      thankuuu always 💗<br>
+      Met a lot of people but nobody feels like you
+    </p>
+  </div>
+
+  <!-- Music Card -->
+  <div class="music-card">
+    <p class="song">i Love YOU ❤️</p>
+    <p class="artist">naloooooooooooooooooooo</p>
+    <div class="controls">
+      <button id="playPauseBtn">▶</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic">
+    <source src="Music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Images -->
+  <img src="crown.jpg" class="sticker crown">
+
+  <div class="polaroids">
+    <img src="gunjuuuu.png">
+    <img src="gunjuuu.jpeg">
+    <img src="Screenshot 2025-12-15 205118.png">
+  </div>
+
+  <div class="big-photo">
+    <img src="Screenshot 2025-12-15 205812.png">
+  </div>
+
+  <img src="download (13).jpeg" class="sticker bow">
+  <img src="9e832c4a1502d988bd0631800654b5c0.jpg" class="sticker kiss">
+
+</div>
+
+<!-- 🔽 EXTRA SPACE (IMPORTANT FOR SCROLL) -->
+<div style="height: 600px;"></div>
+<!-- 🎥 BIG VIDEO SECTION -->
+<div class="big-video-section">
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+</div>
+
+
+<!-- 💌 EMOTIONAL SCROLL CARD -->
+<div id="scrollCard" class="scroll-card">
+  💌 Tap to open
+</div>
+
+<!-- 💖 EMOTIONAL POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">×</span>
+    <h3>For You 💗</h3>
+    <p>
+      Tu sirf meri best friend nahi hai,<br>
+      tu meri family hai.<br>
+      Har moment ke liye thank you 🫶 dekh y chat gpt h icant expresss 
+    </p>
+  </div>
+</div>
+
+<!-- 😂 FUNNY SCROLL CARD -->
+<div id="funnyCard" class="scroll-card funny-card">
+  😂 Open if bored
+</div>
+
+<!-- 🤡 FUNNY POPUP -->
+<div id="funnyPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeFunny()">×</span>
+    <h3>Breaking News 🚨</h3>
+    <p>
+       acha sa ptale mujhe bhi ptvade  👑😂<br><br>
+      budhhuuu h tuuu
+    </p>
+  </div>
+</div>
+
+<!-- ✅ FULL SAFE SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* MUSIC */
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("playPauseBtn");
+
+  if (btn && music) {
+    btn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        btn.innerHTML = "❚❚";
+      } else {
+        music.pause();
+        btn.innerHTML = "▶";
+      }
+    });
+  }
+
+  /* CARDS */
+  const scrollCard = document.getElementById("scrollCard");
+  const popup = document.getElementById("popup");
+  const funnyCard = document.getElementById("funnyCard");
+  const funnyPopup = document.getElementById("funnyPopup");
+
+  // Scroll based show
+  window.addEventListener("scroll", () => {
+    if (scrollCard && window.scrollY > 150) {
+      scrollCard.style.display = "block";
+    }
+    if (funnyCard && window.scrollY > 300) {
+      funnyCard.style.display = "block";
+    }
+  });
+
+  // Auto show funny card after 2 sec
+  setTimeout(() => {
+    if (funnyCard) {
+      funnyCard.style.display = "block";
+    }
+  }, 2000);
+
+  // Click actions
+  if (scrollCard && popup) {
+    scrollCard.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+  }
+
+  if (funnyCard && funnyPopup) {
+    funnyCard.addEventListener("click", () => {
+      funnyPopup.style.display = "flex";
+    });
+  }
+
+  // Close functions
+  window.closePopup = function () {
+    popup.style.display = "none";
+  };
+
+  window.closeFunny = function () {
+    funnyPopup.style.display = "none";
+  };
+
+  // Funny alert on big photo
+  const bigPhoto = document.querySelector(".big-photo img");
+  if (bigPhoto) {
+    bigPhoto.addEventListener("click", () => {
+      alert("Warning ⚠️\nToo cute + too dramatic 😂💗");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>
